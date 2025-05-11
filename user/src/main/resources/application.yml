@@ -1,0 +1,25 @@
+spring:
+  application:
+      name: user
+  config:
+    import: configserver:http://localhost:8888
+
+#    h2:
+#      console:
+#        enabled: true
+#    datasource:
+#      url: jdbc:h2:mem:test
+#    jpa:
+#      show-sql: true
+#      hibernate:
+#        ddl-auto: create
+#    datasource:
+#      url: jdbc:postgresql://localhost:5432/userdb
+#      username: sachin
+#      password: Sachin@2247
+#    jpa:
+#      database: POSTGRESQL
+#      show-sql: true
+#      hibernate:
+#        ddl-auto: update
+#      database-platform: org.hibernate.dialect.PostgreSQLDialect
