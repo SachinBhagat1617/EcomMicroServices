@@ -1,0 +1,70 @@
+2025-06-21T07:13:12.305+05:30  INFO 36084 --- [order] [main] c.e.order.OrderApplication               : Starting OrderApplication using Java 21.0.7 with PID 36084 (C:\Users\ritwi\OneDrive\Desktop\MicroServices\order\target\classes started by ritwi in C:\Users\ritwi\OneDrive\Desktop\MicroServices)
+2025-06-21T07:13:12.308+05:30  INFO 36084 --- [order] [main] c.e.order.OrderApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-06-21T07:13:12.390+05:30  INFO 36084 --- [order] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-06-21T07:13:12.391+05:30  INFO 36084 --- [order] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=order, profiles=[default], label=null, version=null, state=null
+2025-06-21T07:13:13.886+05:30  INFO 36084 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-21T07:13:14.037+05:30  INFO 36084 --- [order] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139 ms. Found 2 JPA repository interfaces.
+2025-06-21T07:13:14.343+05:30  INFO 36084 --- [order] [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-06-21T07:13:14.352+05:30  INFO 36084 --- [order] [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-06-21T07:13:14.481+05:30  INFO 36084 --- [order] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cd1a700e-4293-39a3-b0fd-cbba07329233
+2025-06-21T07:13:15.527+05:30  INFO 36084 --- [order] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8051 (http)
+2025-06-21T07:13:15.549+05:30  INFO 36084 --- [order] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-21T07:13:15.550+05:30  INFO 36084 --- [order] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-21T07:13:15.627+05:30  INFO 36084 --- [order] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-21T07:13:15.628+05:30  INFO 36084 --- [order] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3230 ms
+2025-06-21T07:13:16.198+05:30  INFO 36084 --- [order] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-21T07:13:16.263+05:30  INFO 36084 --- [order] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-21T07:13:16.297+05:30  INFO 36084 --- [order] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-21T07:13:16.654+05:30  INFO 36084 --- [order] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-21T07:13:16.683+05:30  INFO 36084 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-21T07:13:16.946+05:30  INFO 36084 --- [order] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@202fd4c4
+2025-06-21T07:13:16.948+05:30  INFO 36084 --- [order] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-21T07:13:16.993+05:30  WARN 36084 --- [order] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-21T07:13:17.024+05:30  INFO 36084 --- [order] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.17
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-21T07:13:18.629+05:30  INFO 36084 --- [order] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-21T07:13:18.850+05:30  INFO 36084 --- [order] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-21T07:13:19.778+05:30  WARN 36084 --- [order] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-21T07:13:21.447+05:30  INFO 36084 --- [order] [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'order.springCloudBusInput' has 1 subscriber(s).
+2025-06-21T07:13:21.823+05:30  INFO 36084 --- [order] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-21T07:13:21.902+05:30  WARN 36084 --- [order] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-21T07:13:21.913+05:30  INFO 36084 --- [order] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 25 endpoints beneath base path '/actuator'
+2025-06-21T07:13:22.063+05:30  INFO 36084 --- [order] [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-06-21T07:13:22.063+05:30  INFO 36084 --- [order] [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'order.errorChannel' has 1 subscriber(s).
+2025-06-21T07:13:22.064+05:30  INFO 36084 --- [order] [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-06-21T07:13:22.127+05:30  INFO 36084 --- [order] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-21T07:13:22.154+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-21T07:13:22.159+05:30  INFO 36084 --- [order] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-21T07:13:22.169+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-21T07:13:22.369+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-21T07:13:22.372+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-21T07:13:22.373+05:30  INFO 36084 --- [order] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-21T07:13:22.375+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1750470202374 with initial instances count: 2
+2025-06-21T07:13:22.382+05:30  INFO 36084 --- [order] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ORDER with eureka with status UP
+2025-06-21T07:13:22.383+05:30  INFO 36084 --- [order] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1750470202383, current=UP, previous=STARTING]
+2025-06-21T07:13:22.385+05:30  INFO 36084 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/Ritwik.mshome.net:order:8051: registering service...
+2025-06-21T07:13:22.386+05:30  INFO 36084 --- [order] [main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2025-06-21T07:13:22.386+05:30  INFO 36084 --- [order] [main] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
+2025-06-21T07:13:22.446+05:30  INFO 36084 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/Ritwik.mshome.net:order:8051 - registration status: 204
+2025-06-21T07:13:22.511+05:30  INFO 36084 --- [order] [main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2025-06-21T07:13:22.547+05:30  INFO 36084 --- [order] [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.MaMh_EgmSeCF4Dzu3rk7vw, bound to: springCloudBus
+2025-06-21T07:13:22.553+05:30  INFO 36084 --- [order] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-21T07:13:22.604+05:30  INFO 36084 --- [order] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#456b12c3:0/SimpleConnection@6145be92 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63628]
+2025-06-21T07:13:22.671+05:30  INFO 36084 --- [order] [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-460042685.springCloudBusInput.errors' has 1 subscriber(s).
+2025-06-21T07:13:22.672+05:30  INFO 36084 --- [order] [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-460042685.springCloudBusInput.errors' has 2 subscriber(s).
+2025-06-21T07:13:22.702+05:30  INFO 36084 --- [order] [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.MaMh_EgmSeCF4Dzu3rk7vw'
+2025-06-21T07:13:22.735+05:30  INFO 36084 --- [order] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8051 (http) with context path '/'
+2025-06-21T07:13:22.736+05:30  INFO 36084 --- [order] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8051
+2025-06-21T07:13:22.835+05:30  INFO 36084 --- [order] [main] c.e.order.OrderApplication               : Started OrderApplication in 12.223 seconds (process running for 13.252)

@@ -34,7 +34,6 @@ public class ProductController {
         try {
             //recommend sticking with the original approach (using String for productRequestDTO)
             // as it's more reliable when dealing with multipart requests
-
             ObjectMapper mapper = new ObjectMapper();
             ProductRequestDTO productRequestDTO = mapper.readValue(productString, ProductRequestDTO.class);
             //- `ObjectMapper.readValue()`: JSON String → Java Object
