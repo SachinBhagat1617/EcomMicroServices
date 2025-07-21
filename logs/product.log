@@ -1,26 +1,80 @@
-2025-06-27T00:25:40.792+05:30  WARN 28136 --- [product] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h7m39s899ms66µs100ns).
-2025-06-27T00:29:55.112+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T00:34:55.158+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T00:39:55.173+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T00:44:55.190+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T00:49:55.204+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T00:54:55.218+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T00:59:55.228+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T01:04:55.238+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T01:09:55.242+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T01:13:13.343+05:30  WARN 28136 --- [product] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s729ms299µs400ns).
-2025-06-27T01:46:13.689+05:30  WARN 28136 --- [product] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m347ms611µs200ns).
-2025-06-27T01:47:57.309+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T01:52:57.323+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T01:57:57.327+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:02:57.344+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:07:57.349+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:12:57.371+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:17:57.384+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:22:57.401+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:27:57.410+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:32:57.417+05:30  INFO 28136 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-27T02:34:01.498+05:30  INFO 28136 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T00:04:40.221+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:09:40.258+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:14:40.260+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:19:40.273+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:24:40.286+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:29:40.311+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:34:40.319+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:39:40.330+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:44:40.335+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:37:59.761+05:30  WARN 50336 --- [product] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m58s811ms541µs600ns).
+2025-07-09T01:40:09.158+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:45:09.173+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:50:09.187+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:55:09.204+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T02:00:09.219+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T02:05:09.232+05:30  INFO 50336 --- [product] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T02:06:02.848+05:30  INFO 50336 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 19 more
+
+2025-07-09T02:06:02.852+05:30  WARN 50336 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:02.862+05:30  INFO 50336 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -82,68 +136,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
-2025-06-27T02:34:01.510+05:30  WARN 28136 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-27T02:34:01.510+05:30  INFO 28136 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
-	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 19 more
-
-2025-06-27T02:34:01.511+05:30  WARN 28136 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-27T02:34:01.534+05:30  INFO 28136 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:02.863+05:30  WARN 50336 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:02.901+05:30  INFO 50336 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -203,8 +197,7 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 20 more
 
-2025-06-27T02:34:01.535+05:30  WARN 28136 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-27T02:34:01.548+05:30  INFO 28136 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:02.902+05:30  INFO 50336 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -267,8 +260,9 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 23 more
 
-2025-06-27T02:34:01.548+05:30  WARN 28136 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-27T02:34:01.549+05:30  INFO 28136 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2025-07-09T02:06:02.902+05:30  WARN 50336 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:02.903+05:30  WARN 50336 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:02.905+05:30  INFO 50336 --- [product] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
@@ -284,7 +278,7 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 
-2025-06-27T02:34:01.536+05:30 ERROR 28136 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - was unable to send heartbeat!
+2025-07-09T02:06:02.904+05:30 ERROR 50336 --- [product] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - was unable to send heartbeat!
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -300,11 +294,11 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-06-27T02:34:09.083+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCT with eureka with status DOWN
-2025-06-27T02:34:09.085+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1750971849085, current=DOWN, previous=UP]
-2025-06-27T02:34:09.086+05:30  INFO 28136 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081: registering service...
-2025-06-27T02:34:09.164+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-27T02:34:09.176+05:30  INFO 28136 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/PRODUCT": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/PRODUCT": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:11.683+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCT with eureka with status DOWN
+2025-07-09T02:06:11.684+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1752006971684, current=DOWN, previous=UP]
+2025-07-09T02:06:11.686+05:30  INFO 50336 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081: registering service...
+2025-07-09T02:06:11.789+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-09T02:06:11.789+05:30  INFO 50336 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/PRODUCT": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/PRODUCT": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -366,8 +360,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
-2025-06-27T02:34:09.177+05:30  WARN 28136 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/PRODUCT": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-27T02:34:09.177+05:30  WARN 28136 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - registration failed Cannot execute request on any known server
+2025-07-09T02:06:11.790+05:30  WARN 50336 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/PRODUCT": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:11.790+05:30  WARN 50336 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -385,7 +379,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-06-27T02:34:09.178+05:30  WARN 28136 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2025-07-09T02:06:11.794+05:30  WARN 50336 --- [product] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -403,21 +397,21 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-06-27T02:34:09.192+05:30  INFO 28136 --- [product] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-27T02:34:09.227+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-06-27T02:34:09.856+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-06-27T02:34:09.859+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.HHuEwC53SQmllnYXxF_K7g'
-2025-06-27T02:34:09.970+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product.rabbit-956127475.springCloudBusInput.errors' has 1 subscriber(s).
-2025-06-27T02:34:09.972+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product.rabbit-956127475.springCloudBusInput.errors' has 0 subscriber(s).
-2025-06-27T02:34:10.088+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2025-06-27T02:34:10.089+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'product.errorChannel' has 0 subscriber(s).
-2025-06-27T02:34:10.091+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
-2025-06-27T02:34:10.132+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-27T02:34:10.155+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-27T02:34:10.168+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-27T02:34:10.169+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-27T02:34:13.186+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-27T02:34:13.251+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:11.852+05:30  INFO 50336 --- [product] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-09T02:06:11.915+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-07-09T02:06:12.443+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-07-09T02:06:12.456+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.4HY_wdRESKe1KNk44oQpbg'
+2025-07-09T02:06:12.606+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product.rabbit-55978815.springCloudBusInput.errors' has 1 subscriber(s).
+2025-07-09T02:06:12.608+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'product.rabbit-55978815.springCloudBusInput.errors' has 0 subscriber(s).
+2025-07-09T02:06:12.857+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-09T02:06:12.858+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'product.errorChannel' has 0 subscriber(s).
+2025-07-09T02:06:12.859+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-07-09T02:06:12.886+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-09T02:06:12.910+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-09T02:06:12.921+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-09T02:06:12.923+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-07-09T02:06:15.936+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-07-09T02:06:15.983+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -495,8 +489,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 38 more
 
-2025-06-27T02:34:13.252+05:30  WARN 28136 --- [product] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-27T02:34:13.252+05:30 ERROR 28136 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - de-registration failedCannot execute request on any known server
+2025-07-09T02:06:15.985+05:30  WARN 50336 --- [product] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/PRODUCT/Ritwik.mshome.net:product:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:06:15.985+05:30 ERROR 50336 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT/Ritwik.mshome.net:product:8081 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -530,118 +524,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.4.5.jar:3.4.5]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-06-27T02:34:13.256+05:30  INFO 28136 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-06-27T02:38:49.047+05:30  INFO 25236 --- [product] [main] c.e.product.ProductApplication           : Starting ProductApplication using Java 21.0.7 with PID 25236 (C:\Users\ritwi\OneDrive\Desktop\MicroServices\product\target\classes started by ritwi in C:\Users\ritwi\OneDrive\Desktop\MicroServices)
-2025-06-27T02:38:49.052+05:30  INFO 25236 --- [product] [main] c.e.product.ProductApplication           : No active profile set, falling back to 1 default profile: "default"
-2025-06-27T02:38:49.104+05:30  INFO 25236 --- [product] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2025-06-27T02:38:49.105+05:30  INFO 25236 --- [product] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=product, profiles=[default], label=null, version=null, state=null
-2025-06-27T02:38:50.047+05:30  WARN 25236 --- [product] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.ecommerce_micro_service.product.ProductApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
-2025-06-27T02:38:50.064+05:30  INFO 25236 --- [product] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-27T02:38:50.129+05:30 ERROR 25236 --- [product] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.ecommerce_micro_service.product.ProductApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
-	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:850) ~[spring-context-6.2.6.jar:6.2.6]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:847) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:817) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at com.ecommerce_micro_service.product.ProductApplication.main(ProductApplication.java:10) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:247) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:427) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:308) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:617) ~[spring-context-6.2.6.jar:6.2.6]
-	... 18 common frames omitted
-Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'PORT' in value "${PORT}"
-	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:246) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:67) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:568) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64) ~[spring-boot-actuator-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58) ~[spring-boot-actuator-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49) ~[spring-boot-actuator-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	... 24 common frames omitted
-
-2025-06-27T02:39:13.791+05:30  INFO 21016 --- [product] [main] c.e.product.ProductApplication           : Starting ProductApplication using Java 21.0.7 with PID 21016 (C:\Users\ritwi\OneDrive\Desktop\MicroServices\product\target\classes started by ritwi in C:\Users\ritwi\OneDrive\Desktop\MicroServices)
-2025-06-27T02:39:13.795+05:30  INFO 21016 --- [product] [main] c.e.product.ProductApplication           : No active profile set, falling back to 1 default profile: "default"
-2025-06-27T02:39:13.856+05:30  INFO 21016 --- [product] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2025-06-27T02:39:13.857+05:30  INFO 21016 --- [product] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=product, profiles=[default], label=null, version=null, state=null
-2025-06-27T02:39:14.645+05:30  WARN 21016 --- [product] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.ecommerce_micro_service.product.ProductApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
-2025-06-27T02:39:14.658+05:30  INFO 21016 --- [product] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-06-27T02:39:14.686+05:30 ERROR 21016 --- [product] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.ecommerce_micro_service.product.ProductApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
-	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:627) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:850) ~[spring-context-6.2.6.jar:6.2.6]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:847) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:817) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
-	at com.ecommerce_micro_service.product.ProductApplication.main(ProductApplication.java:10) ~[classes/:na]
-Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:247) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:427) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:308) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.6.jar:6.2.6]
-	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:617) ~[spring-context-6.2.6.jar:6.2.6]
-	... 18 common frames omitted
-Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'PORT' in value "${PORT}"
-	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:246) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:67) ~[spring-boot-3.4.5.jar:3.4.5]
-	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:568) ~[spring-core-6.2.6.jar:6.2.6]
-	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64) ~[spring-boot-actuator-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58) ~[spring-boot-actuator-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49) ~[spring-boot-actuator-autoconfigure-3.4.5.jar:3.4.5]
-	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.4.5.jar:3.4.5]
-	... 24 common frames omitted
-
+2025-07-09T02:06:15.988+05:30  INFO 50336 --- [product] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

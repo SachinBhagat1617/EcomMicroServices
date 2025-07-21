@@ -14,6 +14,7 @@ import com.ecommerce_micro_service.order.exceptions.APIException;
 import com.ecommerce_micro_service.order.models.CartItem;
 //import com.ecommerce_micro_service.order.models.Products;
 //import com.ecommerce_micro_service.order.models.User;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ public class CartServiceImpl implements CartService {
     private UserServiceClient userServiceClient;
     @Override
     @Transactional
+    @CircuitBreaker(name="productService", fallbackMethod = "fallBackAddToCart")
     public CartItemResponse addToCart(String userId, CartItemRequestDTO request) {
         UserResponseDTO userResponse=userServiceClient.getUserById(userId);
         System.out.println(userResponse.toString());
@@ -77,6 +79,11 @@ public class CartServiceImpl implements CartService {
         newCartItem.setPrice(productResponseDTO.getPrice() * request.getQuantity());
         CartItem savedCartItem = cartItemRepository.save(newCartItem);
         return modelMapper.map(savedCartItem, CartItemResponse.class);
+    }
+    public CartItemResponse fallBackAddToCart(String userId, CartItemRequestDTO request, Exception e){ // fallbackMethod should have same method to addToCart
+        e.printStackTrace();
+        System.out.println("Fallback Called");
+        return null;
     }
 
     @Override

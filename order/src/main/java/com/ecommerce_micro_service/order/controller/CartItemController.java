@@ -3,6 +3,7 @@ package com.ecommerce_micro_service.order.controller;
 import com.ecommerce_micro_service.order.dto.CartItemRequestDTO;
 import com.ecommerce_micro_service.order.dto.CartItemResponse;
 import com.ecommerce_micro_service.order.service.CartService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,15 +17,19 @@ import java.util.List;
 @Transactional
 public class CartItemController {
     private final CartService cartService;
-    
+
+
     @PostMapping
-    public ResponseEntity<CartItemResponse> addToCart(
+    public ResponseEntity<String> addToCart(
             @RequestHeader("X-User-ID") String userId,
             @RequestBody CartItemRequestDTO request
     ) {
-        CartItemResponse cartIemResponse = cartService.addToCart(userId, request);
-        return ResponseEntity.ok(cartIemResponse);
 
+        CartItemResponse cartIemResponse = cartService.addToCart(userId, request);
+        if(cartIemResponse==null){
+            return ResponseEntity.badRequest().body("Not able to complete request");
+        }
+        return ResponseEntity.ok(cartIemResponse.toString());
     }
     @DeleteMapping("/product")
     public ResponseEntity<String> deleteFromCart(
