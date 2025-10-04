@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 
 spring:
   cloud:
     gateway:
       forwarded-headers-strategy: framework
+=======
+spring:
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 #  cloud:
 #    gateway:
 #      routes:

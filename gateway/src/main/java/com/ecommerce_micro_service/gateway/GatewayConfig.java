@@ -12,9 +12,15 @@ public class GatewayConfig {
         return builder.routes()
                 .route("product-service",r-> r
                                 .path("/api/products/**")
+<<<<<<< HEAD
                                 .filters(f->f.circuitBreaker(config -> config
                                     .setName("ecomBreaker")
                                     .setFallbackUri("forward:/fallback/products")
+=======
+                        .filters(f->f.circuitBreaker(config -> config
+                                .setName("ecomBreaker")
+                                .setFallbackUri("forward:/fallback/products")
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 //                                "forward:/fallback/products"	Internal forward to a Spring Boot controller (✅ Recommended)
 //                                "/fallback/products"	Treated as an external HTTP call (⛔ May fail or cause infinite loop)
                         ))
@@ -50,5 +56,8 @@ public class GatewayConfig {
                 .build();
     }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c

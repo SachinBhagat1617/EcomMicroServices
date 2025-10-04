@@ -4,8 +4,11 @@
     <file url="file://$PROJECT_DIR$/configServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/notification/notification/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification/src/main/java" charset="UTF-8" />
+=======
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
     <file url="file://$PROJECT_DIR$/order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/product/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/src/main/java" charset="UTF-8" />

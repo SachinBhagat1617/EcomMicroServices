@@ -1,14 +1,21 @@
 spring:
   datasource:
+<<<<<<< HEAD
     url: jdbc:postgresql://localhost:5432/order?timezone=Asia/Kolkata
     username: sachin
     password: Sachin@2247
+=======
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
   jpa:
     database: POSTGRESQL
     show-sql: true
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+<<<<<<< HEAD
 
 
   rabbitmq:
@@ -18,18 +25,30 @@ spring:
     password: ${RABBITMQ_PASSWORD:guest}
     virtual-host: ${RABBITMQ_VHOST:guest}
     connection-timeout: 30000
+=======
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+<<<<<<< HEAD
   endpoint:
+=======
+  endpoint:  # it's singular(endpoint) to get details
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
     health:
       show-details: always
   health:
     circuitbreakers:
       enabled: true
+<<<<<<< HEAD
 
 server:
   port: 8083
@@ -44,6 +63,11 @@ rabbitmq:
     key: order.tracking
 
 
+=======
+server:
+  port: 8083
+
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 eureka:
   client:
     serviceUrl:
@@ -66,6 +90,10 @@ logging:
       max-file-size: 5MB
       max-history: 7
 
+<<<<<<< HEAD
+=======
+#circuit-breaker
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 resilience4j:
   circuitbreaker:
     instances:
@@ -78,6 +106,7 @@ resilience4j:
         failureRateThreshold: 50
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slidingWindowType: count_based
+<<<<<<< HEAD
   retry:
     instances:
       addToCartRetry:
@@ -86,3 +115,5 @@ resilience4j:
         enable-exponential-backoff: true
         exponential-backoff-multiplier: 1.5
         exponential-max-wait-duration: 5s
+=======
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-10-04T10:16:13.004+05:30  WARN 14296 --- [order] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h53m25s800ms939µs900ns).
 2025-10-04T10:18:18.563+05:30  INFO 14296 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-10-04T10:23:18.575+05:30  INFO 14296 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
@@ -1211,6 +1212,30 @@ Caused by: com.rabbitmq.client.ShutdownSignalException: connection error; protoc
 2025-10-04T15:14:56.546+05:30  INFO 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/LAPTOP-G9MIKI6M.mshome.net:order:8083: registering service...
 2025-10-04T15:14:56.826+05:30  INFO 46020 --- [order] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-10-04T15:14:56.910+05:30  INFO 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+=======
+2025-07-09T00:03:18.733+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:08:18.778+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:13:18.779+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:18:18.801+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:23:18.811+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:28:18.824+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:33:18.832+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:38:18.839+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T00:43:18.855+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:38:06.216+05:30  WARN 20076 --- [order] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m58s814ms138µs300ns).
+2025-07-09T01:38:47.681+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:43:47.695+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:48:47.701+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:53:47.719+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T01:58:47.735+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T02:03:47.747+05:30  INFO 20076 --- [order] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-09T02:05:59.083+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ORDER with eureka with status DOWN
+2025-07-09T02:05:59.085+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1752006959085, current=DOWN, previous=UP]
+2025-07-09T02:05:59.092+05:30  INFO 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/Ritwik.mshome.net:order:8083: registering service...
+2025-07-09T02:05:59.313+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-09T02:05:59.359+05:30  INFO 20076 --- [order] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-09T02:05:59.378+05:30  INFO 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1271,9 +1296,14 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 21 more
 
+<<<<<<< HEAD
 2025-10-04T15:14:56.912+05:30  WARN 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 2025-10-04T15:14:56.917+05:30  INFO 46020 --- [order] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
 2025-10-04T15:14:56.959+05:30  INFO 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+=======
+2025-07-09T02:05:59.380+05:30  WARN 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:05:59.438+05:30  INFO 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -1335,8 +1365,16 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 22 more
 
+<<<<<<< HEAD
 2025-10-04T15:14:56.962+05:30  WARN 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
 2025-10-04T15:14:56.962+05:30  WARN 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/LAPTOP-G9MIKI6M.mshome.net:order:8083 - registration failed Cannot execute request on any known server
+=======
+2025-07-09T02:05:59.441+05:30  WARN 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ORDER": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-07-09T02:05:59.444+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-07-09T02:05:59.466+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-07-09T02:05:59.473+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.kke_VNVMQkqIYKx0nOJ_Sg'
+2025-07-09T02:05:59.443+05:30  WARN 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ORDER/Ritwik.mshome.net:order:8083 - registration failed Cannot execute request on any known server
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1354,7 +1392,11 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
+<<<<<<< HEAD
 2025-10-04T15:14:57.003+05:30  WARN 46020 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+=======
+2025-07-09T02:05:59.521+05:30  WARN 20076 --- [order] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -1372,6 +1414,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
+<<<<<<< HEAD
 2025-10-04T15:14:57.238+05:30  INFO 46020 --- [order] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
 2025-10-04T15:14:57.238+05:30  INFO 46020 --- [order] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
 2025-10-04T15:14:57.240+05:30  INFO 46020 --- [order] [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.fBuSBfvcTN6hosFbSct1JQ'
@@ -1975,3 +2018,14 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
 2025-10-04T15:39:41.977+05:30  INFO 36872 --- [order] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+=======
+2025-07-09T02:05:59.601+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'order.rabbit-1011587727.springCloudBusInput.errors' has 1 subscriber(s).
+2025-07-09T02:05:59.606+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'order.rabbit-1011587727.springCloudBusInput.errors' has 0 subscriber(s).
+2025-07-09T02:05:59.877+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-07-09T02:05:59.878+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'order.errorChannel' has 0 subscriber(s).
+2025-07-09T02:05:59.879+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-07-09T02:05:59.936+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-09T02:05:59.976+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-09T02:05:59.996+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-09T02:06:00.007+05:30  INFO 20076 --- [order] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+>>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
