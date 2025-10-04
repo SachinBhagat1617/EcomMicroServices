@@ -1,0 +1,64 @@
+
+
+spring:
+  cloud:
+    gateway:
+      forwarded-headers-strategy: framework
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: product-service
+#          uri: lb://product  # load-balanced will automatically find localhost:8082 from eureka-server just remember to give the correct name // product
+#          predicates:
+#            - Path=/api/products/**
+#        - id: user-service
+#          uri: lb://user
+#          predicates:
+#            - Path=/api/users/**
+#        - id: order-service
+#          uri: lb://order
+#          predicates:
+#            - Path=/api/orders/** , /api/cart/**
+#        - id: eureka-server
+#          uri: http://localhost:8761
+#          predicates:
+#            - Path=/eureka/main # this localhost:8761/eureka/main is map to localhost:8080/eureka/main
+#          filters:  # adding filter to remove /eureka/main and this would map localhost:8761/ to localhost:8080/eureka/main
+#            - SetPath=/
+#        - id: eureka-server-static  # this for loading the css because while loading localhost:8080/eureka/main it is trying to fetch localhost:8080/eureka/** to load css which is not mapped to localhost:8761
+#          uri: http://localhost:8761
+#          predicates:  # url which is failing to load css checked in chrome network-tab http://localhost:8080/eureka/css/wro.css
+#            - Path= /eureka/**  # maps localhost:8080/eureka/** to localhost:8761/eureka/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: 8080
+
+#Circuit Breaker
+resilience4j:
+  circuitbreaker:
+    instances:
+      ecomBreaker:  #circuit-breaker at gateway level
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenSate: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: count_based
