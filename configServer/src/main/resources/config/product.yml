@@ -3,10 +3,6 @@ spring:
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASS}
-<<<<<<< HEAD
-
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -14,7 +10,6 @@ spring:
       ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   rabbitmq:
-<<<<<<< HEAD
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
     username: ${RABBITMQ_USERNAME:guest}
@@ -22,12 +17,6 @@ spring:
     virtual-host: ${RABBITMQ_VHOST:guest}
     connection-timeout: 30000
 
-=======
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 
 management:
   endpoints:

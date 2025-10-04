@@ -27,7 +27,7 @@ services:
     networks:
       - backend
     restart: unless-stopped
-<<<<<<< HEAD
+
 #  rabbitmq:
 #    container_name: rabbitmq_container
 #    image: rabbitmq:3-management
@@ -40,7 +40,7 @@ services:
 #    networks:
 #      - backend
 #    restart: unless-stopped
-=======
+
   rabbitmq:
     container_name: rabbitmq_container
     image: rabbitmq:3-management
@@ -53,7 +53,7 @@ services:
     networks:
       - backend
     restart: unless-stopped
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
 
 networks:
   backend:

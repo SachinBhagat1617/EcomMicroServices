@@ -10,11 +10,8 @@
         <option value="$PROJECT_DIR$/configServer/pom.xml" />
         <option value="$PROJECT_DIR$/eureka/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/notification/notification/pom.xml" />
         <option value="$PROJECT_DIR$/notification/pom.xml" />
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
       </list>
     </option>
   </component>

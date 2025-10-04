@@ -4,8 +4,6 @@ spring:
   config:
     import: configserver:http://localhost:8888
 
-<<<<<<< HEAD
-=======
 #  h2:
 #    console:
 #      enabled: true
@@ -15,5 +13,3 @@ spring:
 #    show-sql: true
 #    hibernate:
 #      ddl-auto: create
-
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c

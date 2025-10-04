@@ -5,19 +5,12 @@ spring:
       uri: ${DB_URI}
       database: userdb
   rabbitmq:
-<<<<<<< HEAD
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
     virtual-host: ${RABBITMQ_VHOST:guest}
     connection-timeout: 30000
-=======
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 
 management:
   endpoints:
@@ -46,8 +39,6 @@ logging:
   logback:
     rollingpolicy:
       max-file-size: 5MB
-<<<<<<< HEAD
       max-history: 7
-=======
-      max-history: 7
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
+

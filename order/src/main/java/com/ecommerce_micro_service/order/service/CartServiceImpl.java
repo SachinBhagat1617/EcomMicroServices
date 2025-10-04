@@ -15,10 +15,9 @@ import com.ecommerce_micro_service.order.models.CartItem;
 //import com.ecommerce_micro_service.order.models.Products;
 //import com.ecommerce_micro_service.order.models.User;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-<<<<<<< HEAD
+
 import io.github.resilience4j.retry.annotation.Retry;
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +28,9 @@ import java.util.Optional;
 
 @Service
 public class CartServiceImpl implements CartService {
-<<<<<<< HEAD
+
     private int attempt=0;
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
     @Autowired
     private CartItemRepository cartItemRepository;
     @Autowired
@@ -43,15 +41,12 @@ public class CartServiceImpl implements CartService {
     private UserServiceClient userServiceClient;
     @Override
     @Transactional
-<<<<<<< HEAD
+
     //@CircuitBreaker(name="productService", fallbackMethod = "fallBackAddToCart")
     @Retry(name="addToCartRetry") // this is the way to implement but there are some error look into it
-    public CartItemResponse addToCart(String userId, CartItemRequestDTO request) {
-        System.out.println("Tried to addToCart attempt Number "+attempt++);
-=======
     @CircuitBreaker(name="productService", fallbackMethod = "fallBackAddToCart")
     public CartItemResponse addToCart(String userId, CartItemRequestDTO request) {
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
         UserResponseDTO userResponse=userServiceClient.getUserById(userId);
         System.out.println(userResponse.toString());
         if (userResponse == null ||
@@ -100,14 +95,12 @@ public class CartServiceImpl implements CartService {
         System.out.println("Fallback Called");
         return null;
     }
-<<<<<<< HEAD
+
     public CartItemResponse getDefaultAddToCart(String userId, CartItemRequestDTO request, Exception e) {
         System.out.println("Retry fallback Called due to: " + e.getMessage());
         return null;
     }
-=======
 
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
     @Override
     @Transactional
     public String deleteFromCart(String userId, Long productId) {

@@ -3,7 +3,6 @@ spring:
       name: user
   config:
     import: configserver:http://localhost:8888
-
 #    h2:
 #      console:
 #        enabled: true

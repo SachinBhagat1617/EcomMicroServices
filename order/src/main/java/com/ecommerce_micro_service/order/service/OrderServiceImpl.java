@@ -1,11 +1,10 @@
 package com.ecommerce_micro_service.order.service;
 
 import com.ecommerce_micro_service.order.client.UserServiceClient;
-<<<<<<< HEAD
+
 import com.ecommerce_micro_service.order.dto.OrderCreatedEventDTO;
 import com.ecommerce_micro_service.order.dto.OrderItemsDTO;
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
 import com.ecommerce_micro_service.order.dto.UserResponseDTO;
 import com.ecommerce_micro_service.order.repositories.CartItemRepository;
 import com.ecommerce_micro_service.order.repositories.OrderRepository;
@@ -19,24 +18,18 @@ import com.ecommerce_micro_service.order.models.OrderStatus;
 import com.ecommerce_micro_service.order.models.Orders;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-<<<<<<< HEAD
-import org.hibernate.query.Order;
+
+
 import org.modelmapper.ModelMapper;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-=======
-import org.modelmapper.ModelMapper;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -47,7 +40,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository  orderRepository;
     private final CartItemRepository cartItemRepository;
     private final UserServiceClient userServiceClient;
-<<<<<<< HEAD
+
 
     private final RabbitTemplate rabbitTemplate;
 
@@ -57,8 +50,6 @@ public class OrderServiceImpl implements OrderService {
     @Value("${rabbitmq.routing.key}")
     private String routingKey;
 
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
     @Override
     @Transactional
     public OrderResponseDTO placeOrder(String userId) {
@@ -105,7 +96,7 @@ public class OrderServiceImpl implements OrderService {
         cartItems.forEach(cartItem->{
             cartItemRepository.deleteById(cartItem.getId());
         });
-<<<<<<< HEAD
+
         OrderCreatedEventDTO orderCreatedEventDTO=new OrderCreatedEventDTO(
                 savedOrder.getId(),
                 savedOrder.getUserId(),
@@ -115,14 +106,11 @@ public class OrderServiceImpl implements OrderService {
                 savedOrder.getCreatedAt()
         );
         rabbitTemplate.convertAndSend(exchangeName,routingKey, orderCreatedEventDTO);
-=======
-
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 
         OrderResponseDTO orderResponseDTO=modelMapper.map(savedOrder,OrderResponseDTO.class);
         return orderResponseDTO;
     }
-<<<<<<< HEAD
+
 
     public List<OrderItemsDTO> mapToOrderDTO(List<OrderItems>orderItems){
         return orderItems.stream()
@@ -134,6 +122,5 @@ public class OrderServiceImpl implements OrderService {
                                 item.getPrice()
                         )).collect(Collectors.toList());
     }
-=======
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
 }

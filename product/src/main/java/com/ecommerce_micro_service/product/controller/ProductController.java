@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-<<<<<<< HEAD
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -22,12 +21,9 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.util.List;
 
-
-=======
 import java.io.IOException;
 import java.util.List;
 
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
 @RestController
 @RequestMapping("/api")
 public class ProductController {
@@ -38,7 +34,7 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository;
 
-<<<<<<< HEAD
+
 //    @PostMapping(path = "/products")  // Remove consumes attribute completely
 //    public ResponseEntity<ProductResponseDTO> addProducts(
 //            @RequestPart(value = "product", required = true) String productString,  // Change to String
@@ -126,28 +122,26 @@ public ResponseEntity<ProductResponseDTO> addProduct(
         }
     }
 
+//
+//    @PostMapping(path = "/products")  // Remove consumes attribute completely
+//    public ResponseEntity<ProductResponseDTO> addProducts(
+//            @RequestPart(value = "product", required = true) String productString,  // Change to String
+//            @RequestPart(value = "image", required = true) MultipartFile image) {
+//        try {
+//            //recommend sticking with the original approach (using String for productRequestDTO)
+//            // as it's more reliable when dealing with multipart requests
+//            ObjectMapper mapper = new ObjectMapper();
+//            ProductRequestDTO productRequestDTO = mapper.readValue(productString, ProductRequestDTO.class);
+//            //- `ObjectMapper.readValue()`: JSON String → Java Object
+//            String imageUrl = cloudinaryService.uploadImage(image);
+//            productRequestDTO.setImageUrl(imageUrl);
+//            ProductResponseDTO productResponseDTO = productService.addProduct(productRequestDTO);
+//            return ResponseEntity.ok(productResponseDTO);
+//        } catch (IOException e) {
+//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
 
-=======
-    @PostMapping(path = "/products")  // Remove consumes attribute completely
-    public ResponseEntity<ProductResponseDTO> addProducts(
-            @RequestPart(value = "product", required = true) String productString,  // Change to String
-            @RequestPart(value = "image", required = true) MultipartFile image) {
-        try {
-            //recommend sticking with the original approach (using String for productRequestDTO)
-            // as it's more reliable when dealing with multipart requests
-            ObjectMapper mapper = new ObjectMapper();
-            ProductRequestDTO productRequestDTO = mapper.readValue(productString, ProductRequestDTO.class);
-            //- `ObjectMapper.readValue()`: JSON String → Java Object
-            String imageUrl = cloudinaryService.uploadImage(image);
-            productRequestDTO.setImageUrl(imageUrl);
-            ProductResponseDTO productResponseDTO = productService.addProduct(productRequestDTO);
-            return ResponseEntity.ok(productResponseDTO);
-        } catch (IOException e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
     @PutMapping(path = "/products/{id}")
     public ResponseEntity<ProductResponseDTO> updateProduct(
             @PathVariable Long id,

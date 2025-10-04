@@ -8,11 +8,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-<<<<<<< HEAD
 @Component // whole class as bean
-=======
-@Component
->>>>>>> 45ce038add230c33c78ad8d28ef5fcb717f61b0c
+
 public class LoggingFilter implements GlobalFilter {
     private static final Logger log = LoggerFactory.getLogger(LoggingFilter.class);
 
