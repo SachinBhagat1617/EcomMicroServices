@@ -21,8 +21,8 @@ import lombok.RequiredArgsConstructor;
 
 
 import org.modelmapper.ModelMapper;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -41,14 +41,16 @@ public class OrderServiceImpl implements OrderService {
     private final CartItemRepository cartItemRepository;
     private final UserServiceClient userServiceClient;
 
+    // stream Bridge for sending event driven messages to brokers if you use supplier it will send message continuously
+    private final StreamBridge streamBridge;
 
-    private final RabbitTemplate rabbitTemplate;
+//    private final RabbitTemplate rabbitTemplate;
 
-    @Value("${rabbitmq.exchange.name}")
-    private String exchangeName;
-
-    @Value("${rabbitmq.routing.key}")
-    private String routingKey;
+//    @Value("${rabbitmq.exchange.name}")
+//    private String exchangeName;
+//
+//    @Value("${rabbitmq.routing.key}")
+//    private String routingKey;
 
     @Override
     @Transactional
@@ -105,8 +107,8 @@ public class OrderServiceImpl implements OrderService {
                 BigDecimal.valueOf(totalAmount),
                 savedOrder.getCreatedAt()
         );
-        rabbitTemplate.convertAndSend(exchangeName,routingKey, orderCreatedEventDTO);
-
+        //rabbitTemplate.convertAndSend(exchangeName,routingKey, orderCreatedEventDTO);
+        streamBridge.send("createOrder-out-0",orderCreatedEventDTO);
         OrderResponseDTO orderResponseDTO=modelMapper.map(savedOrder,OrderResponseDTO.class);
         return orderResponseDTO;
     }
