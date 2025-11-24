@@ -1,6 +1,7 @@
 package com.ecommerce_micro_service.user.controller;
 
 
+import com.ecommerce_micro_service.user.dto.UserRequest;
 import com.ecommerce_micro_service.user.dto.UserResponseDTO;
 import com.ecommerce_micro_service.user.exceptions.APIException;
 import com.ecommerce_micro_service.user.models.User;
@@ -28,8 +29,8 @@ public class UserController {
     private ModelMapper modelMapper;
 
     @GetMapping("/users")
-    public ResponseEntity<List<UserResponseDTO>> getAllUsers() {
-        List<UserResponseDTO> users=userService.getAllUser();
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users=userService.getAllUser();
         if(users.isEmpty()){
             throw new APIException("No Users Found");
         }
@@ -37,9 +38,9 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<String> addUser(@RequestBody  UserResponseDTO userResponseDTO) {
-        User user=modelMapper.map(userResponseDTO,User.class);
-        User addedUser=userService.addUser(user);
+    public ResponseEntity<String> addUser(@RequestBody UserRequest userRequest) {
+        //User user=modelMapper.map(userResponseDTO,User.class);
+        User addedUser=userService.addUser(userRequest);
         return new ResponseEntity<>("User Added Successfully",HttpStatus.CREATED);
     }
 

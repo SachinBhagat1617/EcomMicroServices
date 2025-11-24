@@ -1,8 +1,7 @@
 package com.ecommerce_micro_service.user.models;
 
-
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Size;
+import com.ecommerce_micro_service.user.models.Address;
+import com.ecommerce_micro_service.user.models.UserRole;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -14,26 +13,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
 @Document(collection = "users")
 public class User {
     @Id
     private String id;
+    private String keycloakId;
+    private String firstName;
+    private String lastName;
 
-    @Size(max=20)
-    private String name;
-
-    @Size(max=50)
-    @Email
     @Indexed(unique = true)
     private String email;
-
-    @Size(max=10)
     private String phone;
-
-    private UserRole role=UserRole.CUSTOMER;
-
-
+    private UserRole role = UserRole.CUSTOMER;
     private Address address;
 
     @CreatedDate

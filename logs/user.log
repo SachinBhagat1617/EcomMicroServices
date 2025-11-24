@@ -1,7 +1,347 @@
-2025-10-13T00:02:15.780+05:30  INFO 35648 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-13T00:07:16.057+05:30  INFO 35648 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-13T00:12:16.081+05:30  INFO 35648 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-13T00:15:56.219+05:30  INFO 35648 --- [user] [cluster-ClusterId{value='68eb54b7b445801aaf39a0ae', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017
+2025-11-25T01:50:22.266+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 4 common frames omitted
+
+2025-11-25T01:50:22.416+05:30  WARN 45364 --- [user] [AMQP Connection 3.97.61.185:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2025-11-25T01:50:22.273+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 4 common frames omitted
+
+2025-11-25T01:50:22.428+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 4 common frames omitted
+
+2025-11-25T01:50:22.688+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.2.1.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Network is unreachable: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 3 common frames omitted
+
+2025-11-25T01:50:22.712+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketException: No such host is known (ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.UnknownHostException: No such host is known (ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 5 common frames omitted
+
+2025-11-25T01:50:22.751+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketException: No such host is known (ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.UnknownHostException: No such host is known (ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 5 common frames omitted
+
+2025-11-25T01:50:24.200+05:30  WARN 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-7] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1007) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:997) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:801) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$500(AMQConnection.java:48) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:696) ~[amqp-client-5.22.0.jar:5.22.0]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291) ~[na:na]
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:325) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:312) ~[na:na]
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295) ~[na:na]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:687) ~[amqp-client-5.22.0.jar:5.22.0]
+	... 1 common frames omitted
+
+2025-11-25T01:50:24.281+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-7] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5b41183d: tags=[[amq.ctag-x9of7DE7nuK88f2ypaVC7Q]], channel=Cached Rabbit Channel: AMQChannel(amqp://qutgvjpf@3.97.61.185:5672/qutgvjpf,1), conn: Proxy@5d5a77de Shared Rabbit Connection: SimpleConnection@44026d39 [delegate=amqp://qutgvjpf@3.97.61.185:5672/qutgvjpf, localPort=62633], acknowledgeMode=AUTO local queue size=0
+2025-11-25T01:50:24.670+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [codfish.rmq.cloudamqp.com:5672]
+2025-11-25T03:50:24.380+05:30  WARN 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-8] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (codfish.rmq.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:671) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:644) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:533) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1484) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createChannel(ConnectionFactoryUtils.java:351) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:156) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:102) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:85) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:625) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1482) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (codfish.rmq.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1245) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar:5.22.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	... 13 common frames omitted
+
+2025-11-25T03:50:24.503+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-8] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@29d02ff4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-11-25T03:50:24.530+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [codfish.rmq.cloudamqp.com:5672]
+2025-11-25T03:50:37.769+05:30  WARN 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-9] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+org.springframework.amqp.AmqpIOException: java.net.UnknownHostException: No such host is known (codfish.rmq.cloudamqp.com)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$RabbitResourceFactory.createConnection(ConnectionFactoryUtils.java:345) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:140) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:102) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:85) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.BlockingQueueConsumer.start(BlockingQueueConsumer.java:625) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1482) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1322) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.UnknownHostException: No such host is known (codfish.rmq.cloudamqp.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.resolveIpAddresses(DnsRecordIpAddressResolver.java:83) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.DnsRecordIpAddressResolver.getAddresses(DnsRecordIpAddressResolver.java:73) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1245) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.22.0.jar:5.22.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	... 10 common frames omitted
+
+2025-11-25T03:50:37.774+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-9] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@49762d19: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-11-25T03:50:37.788+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [codfish.rmq.cloudamqp.com:5672]
+2025-11-25T03:50:37.962+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=148041100, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=251, topologyVersion=TopologyVersion{processId=691f6be987a4f9ef40619c09, counter=4}, lastWriteDate=Tue Nov 25 03:50:37 IST 2025, lastUpdateTimeNanos=793047927224800}
+2025-11-25T03:50:37.961+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=147715400, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000025c, setVersion=251, topologyVersion=TopologyVersion{processId=691f6eafd7b5fa9b9e790eca, counter=6}, lastWriteDate=Tue Nov 25 03:50:37 IST 2025, lastUpdateTimeNanos=793047926877400}
+2025-11-25T03:50:37.969+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017 with max election id 7fffffff000000000000025c and max set version 251
+2025-11-25T03:50:38.108+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=287260500, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=251, topologyVersion=TopologyVersion{processId=691f714326875c7171407e88, counter=3}, lastWriteDate=Tue Nov 25 03:50:38 IST 2025, lastUpdateTimeNanos=793048076125700}
+2025-11-25T03:50:40.567+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-10] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#156f0281:9/SimpleConnection@6d4c946f [delegate=amqp://qutgvjpf@3.97.61.185:5672/qutgvjpf, localPort=51695]
+2025-11-25T03:50:40.576+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-10] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-11-25T03:50:51.527+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T03:55:51.536+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:00:51.552+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:05:51.566+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:20:25.310+05:30  WARN 45364 --- [user] [AMQP Connection 3.97.61.185:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2025-11-25T04:20:25.319+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 4 common frames omitted
+
+2025-11-25T04:20:25.319+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 4 common frames omitted
+
+2025-11-25T04:20:25.319+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:814) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:862) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:517) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:469) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:249) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.2.1.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:182) ~[mongodb-driver-core-5.2.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
+	... 4 common frames omitted
+
+2025-11-25T04:20:25.688+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=137630800, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff000000000000025c, setVersion=251, topologyVersion=TopologyVersion{processId=691f6eafd7b5fa9b9e790eca, counter=6}, lastWriteDate=Tue Nov 25 04:20:20 IST 2025, lastUpdateTimeNanos=794835648211700}
+2025-11-25T04:20:25.690+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017 with max election id 7fffffff000000000000025c and max set version 251
+2025-11-25T04:20:25.702+05:30  WARN 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-10] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1007) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:997) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:801) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection.access$500(AMQConnection.java:48) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:696) ~[amqp-client-5.22.0.jar:5.22.0]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291) ~[na:na]
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:325) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:312) ~[na:na]
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:295) ~[na:na]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199) ~[amqp-client-5.22.0.jar:5.22.0]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:687) ~[amqp-client-5.22.0.jar:5.22.0]
+	... 1 common frames omitted
+
+2025-11-25T04:20:25.709+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=122750300, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=251, topologyVersion=TopologyVersion{processId=691f6be987a4f9ef40619c09, counter=4}, lastWriteDate=Tue Nov 25 04:20:20 IST 2025, lastUpdateTimeNanos=794835679591900}
+2025-11-25T04:20:25.709+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-10] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7e03c279: tags=[[amq.ctag-leLulL3qQruveTm4bbKlZg]], channel=Cached Rabbit Channel: AMQChannel(amqp://qutgvjpf@3.97.61.185:5672/qutgvjpf,1), conn: Proxy@5d5a77de Shared Rabbit Connection: SimpleConnection@6d4c946f [delegate=amqp://qutgvjpf@3.97.61.185:5672/qutgvjpf, localPort=51695], acknowledgeMode=AUTO local queue size=0
+2025-11-25T04:20:25.734+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=224130600, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=251, topologyVersion=TopologyVersion{processId=691f714326875c7171407e88, counter=3}, lastWriteDate=Tue Nov 25 04:20:20 IST 2025, lastUpdateTimeNanos=794835704744800}
+2025-11-25T04:20:25.838+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-11] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [codfish.rmq.cloudamqp.com:5672]
+2025-11-25T04:20:26.911+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-11] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#156f0281:10/SimpleConnection@2acc745 [delegate=amqp://qutgvjpf@3.97.61.185:5672/qutgvjpf, localPort=59407]
+2025-11-25T04:20:26.912+05:30  INFO 45364 --- [user] [springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg-11] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (springCloudBus.anonymous.rW3SkghKQmidElwr5YqwLg) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-11-25T04:22:53.113+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:27:53.129+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:31:16.367+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017
 
 com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
 	at com.mongodb.internal.connection.InternalStreamConnection.createReadTimeoutException(InternalStreamConnection.java:824) ~[mongodb-driver-core-5.2.1.jar:na]
@@ -26,6 +366,10 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:829) ~[mongodb-driver-core-5.2.1.jar:na]
 	... 4 common frames omitted
 
-2025-10-13T00:15:56.498+05:30  INFO 35648 --- [user] [cluster-ClusterId{value='68eb54b7b445801aaf39a0ae', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=140670200, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=248, topologyVersion=TopologyVersion{processId=68e77803c46fa5c56b948548, counter=5}, lastWriteDate=Mon Oct 13 00:15:53 IST 2025, lastUpdateTimeNanos=2412618236990700}
-2025-10-13T00:17:16.106+05:30  INFO 35648 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-10-13T00:22:16.115+05:30  INFO 35648 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:31:16.467+05:30  INFO 45364 --- [user] [cluster-ClusterId{value='692439dfd71b10307b694d87', description='user-db-ecom'}-ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=57809500, minRoundTripTimeNanos=0, setName='atlas-f1kfi8-shard-0', canonicalAddress=ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, hosts=[ac-gqumno8-shard-00-00.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-01.wn0vmwj.mongodb.net:27017, ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017], passives=[], arbiters=[], primary='ac-gqumno8-shard-00-02.wn0vmwj.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=251, topologyVersion=TopologyVersion{processId=691f714326875c7171407e88, counter=3}, lastWriteDate=Tue Nov 25 04:31:09 IST 2025, lastUpdateTimeNanos=795486438014700}
+2025-11-25T04:32:53.147+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:37:53.156+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:42:53.165+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:47:53.175+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:52:53.191+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-25T04:57:53.201+05:30  INFO 45364 --- [user] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

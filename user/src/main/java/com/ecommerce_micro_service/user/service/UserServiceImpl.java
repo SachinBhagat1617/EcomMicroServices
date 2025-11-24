@@ -1,48 +1,53 @@
 package com.ecommerce_micro_service.user.service;
 
+import com.ecommerce_micro_service.user.dto.UserRequest;
+import com.ecommerce_micro_service.user.models.Address;
 import com.ecommerce_micro_service.user.repositories.UserRepository;
 import com.ecommerce_micro_service.user.dto.UserResponseDTO;
 import com.ecommerce_micro_service.user.exceptions.APIException;
 import com.ecommerce_micro_service.user.exceptions.ResourceNotFoundException;
 import com.ecommerce_micro_service.user.models.User;
 import com.ecommerce_micro_service.user.models.UserRole;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.BeanDefinitionDsl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;
     @Autowired
     private ModelMapper modelMapper;
+    private final KeyCloakAdminService keyCloakAdminService;
+
 
     @Override
-    public List<UserResponseDTO> getAllUser() {
+    public List<User> getAllUser() {
         List<User>users=userRepository.findAll();
         if(users.isEmpty()){
             throw new APIException("No Users Found");
         }
-        List<UserResponseDTO> userResponseDTOList=users.stream()
-                .map(user->modelMapper.map(user,UserResponseDTO.class)).toList();
-        return userResponseDTOList;
+
+        return users;
     }
 
     @Override
-    public User addUser( User user) {
-
-        if(userRepository.existsByEmail(user.getEmail())){
-            throw new APIException("User already exists");
-        }
-        if (user.getRole() == null) {
-            user.setRole(UserRole.CUSTOMER);
-        }
-        User addedUser=userRepository.save(user);
-
-        return addedUser;
+    public User addUser( UserRequest userRequest) {
+        String token= keyCloakAdminService.getAdminAccessToken();
+        String keyCloakUSerId=
+                keyCloakAdminService.createUser(token,userRequest);
+        keyCloakAdminService.assignClientRoleToUser(userRequest.getUsername(),"USER",keyCloakUSerId);
+        User user=new User();
+        updateUserFromRequest(user,userRequest);
+        user.setKeycloakId(keyCloakUSerId);
+        User savedUser=userRepository.save(user);
+        return savedUser;
     }
 
     @Override
@@ -55,13 +60,16 @@ public class UserServiceImpl implements UserService {
     public void updateUser(User user) {
         String id=user.getId();
         User existingUser=userRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("User","id",id));
-        if(existingUser.getName()==null){
+        if(existingUser.getFirstName()==null){
             throw new APIException("Please provide updated details");
         }if(existingUser.equals(user)){
             throw new APIException("No changes in user details");
         }
-        if(user.getName()!=null){
-            existingUser.setName(user.getName());
+        if(user.getFirstName()!=null){
+            existingUser.setFirstName(user.getFirstName());
+        }
+        if(user.getLastName()!=null){
+            existingUser.setLastName(user.getLastName());
         }
         if(user.getEmail()!=null){
             existingUser.setEmail(user.getEmail());
@@ -76,6 +84,21 @@ public class UserServiceImpl implements UserService {
             existingUser.setAddress(user.getAddress());
         }
         userRepository.save(existingUser);
+    }
+    private void updateUserFromRequest(User user, UserRequest userRequest) {
+        user.setFirstName(userRequest.getFirstName());
+        user.setLastName(userRequest.getLastName());
+        user.setEmail(userRequest.getEmail());
+        user.setPhone(userRequest.getPhone());
+        if (userRequest.getAddress() != null) {
+            Address address = new Address();
+            address.setStreet(userRequest.getAddress().getStreet());
+            address.setState(userRequest.getAddress().getState());
+            address.setZipcode(userRequest.getAddress().getZipcode());
+            address.setCity(userRequest.getAddress().getCity());
+            address.setCountry(userRequest.getAddress().getCountry());
+            user.setAddress(address);
+        }
     }
 
 }

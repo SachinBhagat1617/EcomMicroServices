@@ -42,3 +42,11 @@ logging:
       max-history: 7
 
 
+keycloak:
+  admin:
+    username: sachin
+    password: sachin
+    server-url: http://localhost:8090
+    realm: Ecom-App
+    client-id: admin-cli
+    client-uid: 4d794237-5ef7-49a7-ac8a-9d6731ea5884
