@@ -58,7 +58,7 @@ public class OrderServiceImpl implements OrderService {
         UserResponseDTO userResponse=userServiceClient.getUserById(userId);
         if (userResponse == null ||
                 userResponse.getId() == null ||
-                userResponse.getName() == null ||
+                userResponse.getFirstName() == null ||
                 userResponse.getEmail() == null) {
             throw new APIException("Invalid user response received from UserService");
         }

@@ -1,9 +1,11 @@
 spring:
   data:
     mongodb:
+      uri: mongodb://localhost:27017/ecom_user
+      database: ecom_user
       #uri: mongodb+srv://sachinbhagat:Sachin%402247@user-db-ecom.wn0vmwj.mongodb.net/?retryWrites=true&w=majority&appName=user-db-ecom
-      uri: ${DB_URI}
-      database: userdb
+#      uri: ${DB_URI}
+#      database: userdb
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}

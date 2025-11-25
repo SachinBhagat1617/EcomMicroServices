@@ -51,7 +51,8 @@ public class CartServiceImpl implements CartService {
         System.out.println(userResponse.toString());
         if (userResponse == null ||
                 userResponse.getId() == null ||
-                userResponse.getName() == null ||
+                userResponse.getFirstName() == null ||
+                userResponse.getLastName() == null ||
                 userResponse.getEmail() == null) {
             throw new APIException("Invalid user response received from UserService");
         }
@@ -107,7 +108,8 @@ public class CartServiceImpl implements CartService {
         UserResponseDTO userResponse=userServiceClient.getUserById(userId);
         if (userResponse == null ||
                 userResponse.getId() == null ||
-                userResponse.getName() == null ||
+                userResponse.getLastName() == null ||
+                userResponse.getFirstName()==null ||
                 userResponse.getEmail() == null) {
             throw new APIException("Invalid user response received from UserService");
         }
@@ -135,7 +137,8 @@ public class CartServiceImpl implements CartService {
         UserResponseDTO userResponse=userServiceClient.getUserById(userId);
         if (userResponse == null ||
                 userResponse.getId() == null ||
-                userResponse.getName() == null ||
+                userResponse.getFirstName() == null ||
+                userResponse.getLastName()==null||
                 userResponse.getEmail() == null) {
             throw new APIException("Invalid user response received from UserService");
         }
