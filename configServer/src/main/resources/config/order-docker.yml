@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/order?timezone=Asia/Kolkata
+    url: jdbc:postgresql://postgres:5432/orderdb?timezone=Asia/Kolkata
     username: sachin
     password: Sachin@2247
   #    url: ${DB_URL}

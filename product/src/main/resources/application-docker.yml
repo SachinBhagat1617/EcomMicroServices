@@ -2,6 +2,6 @@ spring:
   application:
     name: product  # points to product-service.yml
   config:
-    import: optional:configserver:http://configserver:8888
+    import: optional:configserver:http://config-server:8888
 
 
