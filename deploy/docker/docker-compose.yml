@@ -57,7 +57,7 @@ services:
       - 9092:9092
     environment:
       KAFKA_BROKER_ID: 1
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     depends_on:
@@ -98,7 +98,7 @@ services:
       - postgres
 
   config-server:
-    image: ecom/config-server
+    image: sachinbhagat9932/config-server
     container_name: config-server
     ports:
       - 8888:8888
@@ -122,7 +122,7 @@ services:
     restart: on-failure
 
   eureka:
-    image: ecom/eureka
+    image: sachinbhagat9932/eureka
     container_name: eureka
     ports:
       - 8761:8761
@@ -135,10 +135,10 @@ services:
     restart: on-failure
 
   user:
-    image: ecom/user
+    image: sachinbhagat9932/user
     container_name: user
-    ports:
-      - 8082:8082
+#    ports:
+#      - 8082:8082
     depends_on:
       - config-server
       - eureka
@@ -158,10 +158,10 @@ services:
     restart: on-failure
 
   notification:
-    image: ecom/notification
+    image: sachinbhagat9932/notification
     container_name: notification
-    ports:
-      - 8084:8084
+#    ports:
+#      - 8084:8084
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - RABBITMQ_HOST=${RABBITMQ_HOST}
@@ -178,10 +178,10 @@ services:
     restart: on-failure
 
   product:
-    image: ecom/product
+    image: sachinbhagat9932/product
     container_name: product
-    ports:
-      - 8081:8081
+#    ports:
+#      - 8081:8081
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - PORT=8081
@@ -206,10 +206,10 @@ services:
     restart: on-failure
 
   order:
-    image: ecom/order
+    image: sachinbhagat9932/order
     container_name: order
-    ports:
-      - 8083:8083
+#    ports:
+#      - 8083:8083
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - RABBITMQ_HOST=${RABBITMQ_HOST}
@@ -226,7 +226,7 @@ services:
     restart: on-failure
 
   gateway:
-    image: ecom/gateway
+    image: sachinbhagat9932/gateway
     container_name: gateway
     ports:
       - 8080:8080
