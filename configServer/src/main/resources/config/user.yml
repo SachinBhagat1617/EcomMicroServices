@@ -48,7 +48,7 @@ keycloak:
   admin:
     username: sachin
     password: sachin
-    server-url: http://keycloak:8090
+    server-url: http://keycloak:8080
     realm: Ecom-App
     client-id: admin-cli
     client-uid: 4d794237-5ef7-49a7-ac8a-9d6731ea5884

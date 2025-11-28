@@ -20,11 +20,19 @@ server:
   port: 8082
 
 eureka:
+  instance:
+    hostname: user              # Use Docker hostname
+    ip-address: user            # >>> REQUIRED <<<
+    prefer-ip-address: false    # Use hostname instead of a raw IP
+    instance-id: user:8082
+    non-secure-port: 8082
+
   client:
     serviceUrl:
       defaultZone: http://eureka:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
+
 
 logging:
   level:
@@ -40,8 +48,8 @@ logging:
 
 keycloak:
   admin:
-    username: admin
-    password: admin
+    username: sachin
+    password: sachin
     server-url: http://keycloak:8080
     realm: Ecom-App
     client-id: admin-cli

@@ -45,7 +45,7 @@ public class KeyCloakAdminService {
         HttpEntity<MultiValueMap<String,String>> entity=
                 new HttpEntity<>(params,headers);
         ResponseEntity<Map> response=restTemplate.postForEntity(
-                "http://localhost:8090/realms/Ecom-App/protocol/openid-connect/token",
+                "http://keycloak:8080/realms/Ecom-App/protocol/openid-connect/token",
                 entity,
                 Map.class
         );

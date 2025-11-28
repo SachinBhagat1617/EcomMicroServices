@@ -2,6 +2,7 @@ services:
   postgres:
     container_name: postgres
     image: postgres:14
+    mem_limit: 700m
     environment:
       POSTGRES_USER: sachin
       POSTGRES_PASSWORD: Sachin@2247
@@ -18,6 +19,7 @@ services:
   mongo:
     image: mongodb/mongodb-community-server:latest
     container_name: mongo
+    mem_limit: 700m
     ports:
       - "27017:27017"
     networks:
@@ -26,15 +28,17 @@ services:
   keycloak:
     container_name: keycloak
     image: quay.io/keycloak/keycloak:26.4.5
+    mem_limit: 700m
     ports:
       - 8090:8080
     environment:
       KC_BOOTSTRAP_ADMIN_USERNAME: admin
       KC_BOOTSTRAP_ADMIN_PASSWORD: admin
-    command: [ "start-dev" ]
+      PROXY_ADDRESS_FORWARDING: "true"
+      KEYCLOAK_FRONTEND_URL: "http://localhost:8443"
+    command: ["start-dev"]
     networks:
       - backend
-
 
   zookeeper:
     container_name: zookeeper
@@ -62,18 +66,48 @@ services:
     networks:
       - backend
 
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - backend
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    mem_limit: 700m
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
   config-server:
-    build: ./configServer
+    image: ecom/config-server
     container_name: config-server
     ports:
       - 8888:8888
     depends_on:
       - postgres
-      - pgadmin
       - mongo
+      - rabbitmq
       - kafka
       - keycloak
-      - rabbitmq
     environment:
       - SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS=/config
       - RABBITMQ_HOST=${RABBITMQ_HOST}
@@ -82,62 +116,36 @@ services:
       - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
       - RABBITMQ_VHOST=${RABBITMQ_VHOST}
     volumes:
-      - ./configServer/src/main/resources/config:/config
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "http://localhost:8888/actuator/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - ./../../configServer/src/main/resources/config:/config
     networks:
       - backend
+    restart: on-failure
+
   eureka:
-    build: ./eureka
+    image: ecom/eureka
     container_name: eureka
     ports:
       - 8761:8761
-    healthcheck:
-      test: ["CMD","wget","--spider","http://localhost:8761/actuator/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    networks:
-      - backend
-  gateway:
-    build: ./gateway
-    container_name: gateway
-    ports:
-      - 8080:8080
     depends_on:
-      config-server:
-        condition: service_healthy
-      eureka:
-        condition: service_healthy
-      user:
-        condition: service_healthy
-      product:
-        condition: service_healthy
-      order:
-        condition: service_healthy
+      - config-server
     environment:
-      SPRING_PROFILES_ACTIVE: docker
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
     networks:
       - backend
+    restart: on-failure
+
   user:
-    build: ./user
+    image: ecom/user
     container_name: user
     ports:
       - 8082:8082
-    healthcheck:
-      test: [ "CMD","wget","--spider","http://localhost:8082/actuator/health" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
     depends_on:
-      config-server:
-        condition: service_healthy
-      eureka:
-        condition: service_healthy
+      - config-server
+      - eureka
+      - mongo
+      - rabbitmq
     environment:
+      SPRING_PROFILES_ACTIVE: docker
       SPRING_CLOUD_CONFIG_URI: http://config-server:8888
       DB_URI: mongodb://mongo:27017/ecom_user
       RABBITMQ_HOST: ${RABBITMQ_HOST}
@@ -147,8 +155,10 @@ services:
       RABBITMQ_VHOST: ${RABBITMQ_VHOST}
     networks:
       - backend
+    restart: on-failure
+
   notification:
-    build: ./notification
+    image: ecom/notification
     container_name: notification
     ports:
       - 8084:8084
@@ -160,20 +170,15 @@ services:
       - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
       - RABBITMQ_VHOST=${RABBITMQ_VHOST}
     depends_on:
-      config-server:
-        condition: service_healthy
-      eureka:
-        condition: service_healthy
-    healthcheck:
-      test: [ "CMD","wget","--spider","http://localhost:8084/actuator/health" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - config-server
+      - eureka
+      - rabbitmq
     networks:
       - backend
+    restart: on-failure
 
   product:
-    build: ./product
+    image: ecom/product
     container_name: product
     ports:
       - 8081:8081
@@ -192,20 +197,16 @@ services:
       - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
       - RABBITMQ_VHOST=${RABBITMQ_VHOST}
     depends_on:
-      config-server:
-        condition: service_healthy
-      eureka:
-        condition: service_healthy
-    healthcheck:
-      test: [ "CMD","wget","--spider","http://localhost:8081/actuator/health" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - config-server
+      - eureka
+      - postgres
+      - rabbitmq
     networks:
       - backend
+    restart: on-failure
 
   order:
-    build: ./order
+    image: ecom/order
     container_name: order
     ports:
       - 8083:8083
@@ -217,60 +218,28 @@ services:
       - RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
       - RABBITMQ_VHOST=${RABBITMQ_VHOST}
     depends_on:
-      config-server:
-        condition: service_healthy
-      eureka:
-        condition: service_healthy
-    healthcheck:
-      test: [ "CMD","wget","--spider","http://localhost:8083/actuator/health" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      - config-server
+      - eureka
+      - rabbitmq
     networks:
       - backend
+    restart: on-failure
 
-  pgadmin:
-    container_name: pgadmin_container
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:--padmin4@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin:/var/lib/pgadmin
+  gateway:
+    image: ecom/gateway
+    container_name: gateway
     ports:
-      - "5050:80"
-    networks:
-      - backend
-    restart: unless-stopped
-
-
-  #  rabbitmq:
-  #    container_name: rabbitmq_container
-  #    image: rabbitmq:3-management
-  #    environment:
-  #      RABBITMQ_DEFAULT_USER: guest
-  #      RABBITMQ_DEFAULT_PASS: guest
-  #    ports:
-  #      - "5672:5672"  #for rabbitmq
-  #      - "15672:15672"  # RabbitMQ ManagementUI
-  #    networks:
-  #      - backend
-  #    restart: unless-stopped
-
-  rabbitmq:
-    container_name: rabbitmq
-    image: rabbitmq:3-management
+      - 8080:8080
+    depends_on:
+      - user
+      - product
+      - order
+      - notification
     environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    ports:
-      - "5672:5672"  #for rabbitmq
-      - "15672:15672"  # RabbitMQ ManagementUI
+      SPRING_PROFILES_ACTIVE: docker
     networks:
       - backend
-    restart: unless-stopped
-
+    restart: on-failure
 
 networks:
   backend:

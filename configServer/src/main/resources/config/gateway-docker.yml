@@ -63,4 +63,10 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/Ecom-App
+          issuer-uri: http://localhost:8090/realms/Ecom-App
+          jwk-set-uri: http://keycloak:8080/realms/Ecom-App/protocol/openid-connect/certs
+
+
+# since your token will issued by your localhost so in issuer uri it is localhost and the token is locked with private key
+# And jwks_uri contains the public key which is used to unlock token and verifies that token is not tamper by third party or not
+
