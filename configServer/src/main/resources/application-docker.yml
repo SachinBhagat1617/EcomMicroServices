@@ -36,8 +36,8 @@
 spring:
   application:
     name: configServer
-  profiles:
-    active: docker
+#  profiles:
+#    active: docker
   rabbitmq:
     host: ${RABBITMQ_HOST:localhost}
     port: ${RABBITMQ_PORT:5672}

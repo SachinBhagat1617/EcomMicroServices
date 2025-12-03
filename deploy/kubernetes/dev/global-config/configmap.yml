@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecom-configmap
+  labels:
+    app: ecom
+data:
+  SPRING_PROFILES_ACTIVE: "native,docker"
+  DB_URI: "mongodb://mongo:27017/ecom_user"
+  DB_URL: "jdbc:postgresql://postgres:5432/product"
+  CLOUD_NAME: "doochykdj"
+  RABBITMQ_HOST: "codfish.rmq.cloudamqp.com"
+  RABBITMQ_PORT: "5672"
